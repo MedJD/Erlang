@@ -38,7 +38,7 @@ sortie:
 Pas de limites
 
 ### Limites pour le calcul de A et N:
-Faut pas dépasser A=200 erlangs
+Faut pas dépasser A=200 erlangs, et N=220
 
 ## Création des fichiers data
 
