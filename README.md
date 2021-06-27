@@ -6,10 +6,10 @@
 
 faut donner les valeurs de B et N,
 
-exemple d'exécution (B=0.4% et N=27):__
+exemple d'exécution (B=0.4% et N=27):  
 `python3 erlangB.py -B 0.4 -N 27`
 
-sortie:__
+sortie:  
 `A = 16.27 Erlangs`
 
 ### pour calculer B:
