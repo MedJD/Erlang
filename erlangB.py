@@ -21,7 +21,7 @@ def generate_traffic_file():
     data = {}
     #134 199.71
 
-    N = Decimal(1)
+    N = Decimal(195)
 
     while N <= 220:
         A = Decimal(0.01)
