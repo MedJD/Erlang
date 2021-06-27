@@ -23,10 +23,10 @@ def generate_traffic_file():
 
     N = Decimal(1)
 
-    while N <= 5:
+    while N <= 500:
         A = Decimal(0.01)
         data[str(N)] = {}
-        while A <= 20:
+        while A <= 200:
             res = erlangB(A=A, N=N)
             data[str(N)]["{:.2f}".format(A)] = "{:.4f}".format(res)
             print(N, "{:.2f}".format(A))
