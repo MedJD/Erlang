@@ -23,29 +23,36 @@ def generate_traffic_file():
 
     N = Decimal(1)
 
-    while N <= 500:
+    while N <= 220:
         A = Decimal(0.01)
-        data[str(N)] = {}
+        data = {}
         while A <= 200:
-            res = erlangB(A=A, N=N)
-            data[str(N)]["{:.2f}".format(A)] = "{:.4f}".format(res)
+            B = erlangB(A=A, N=N)
+            data["{:.4f}".format(B)] = "{:.2f}".format(A)
             print(N, "{:.2f}".format(A))
             A+= Decimal(0.01)
+        with open('data/ErlangB/traffic/traffic_N=' + str(N), 'w+') as file:
+            file.write(json.dumps(data))
         N+= 1
 
-    with open('traffic', 'w') as file:
-        file.write(json.dumps(data))
-
-def get_traffic():
-    with open('traffic', 'r') as file:
+def get_traffic(B, N):
+    with open('data/ErlangB/traffic/traffic_N=' + str(N), 'r') as file:
         data = json.loads(file.read())
-        res = data['20']["{:.2f}".format(17.61)]*100
-        print(res)
+
+        correct = 0
+        while correct < 0.002:
+            try:
+                res = float(data["{:.4f}".format(B+correct)])
+                break
+            except:
+                correct += 0.0001
+                continue
+        return "{:.2f}".format(res)
 
 def get_proba(A, N):
     return erlangB(A=A, N=N)
 
 if __name__ == '__main__':
     # calculate_traffic()
-    # get_traffic()
+    #print(get_traffic(B=0.5, N=5))
     generate_traffic_file()
