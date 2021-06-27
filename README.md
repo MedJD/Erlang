@@ -55,7 +55,7 @@ pour l'instant les fichiers collectées sont pour:
 Alors pour dépasser ces limite, il faut changer les valeurs des min et des max, par exemple:  
     - minN = 221  
     - maxN = XXX  
-    - minA = 200 
+    - minA = 200  
     - maxA = YYY  
     - stepA = 0.01 (pas de A) 
     
