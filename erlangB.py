@@ -1,12 +1,13 @@
+from decimal import Decimal
 from math import factorial
 import json
 
 def sum(A, N):
     i = 0
-    s = 0.0
+    s = Decimal(0.0)
 
     while i <= N:
-        s+= A**i / factorial(i)
+        s+= A**i / Decimal(factorial(i))
         i+= 1
 
     return s
@@ -18,16 +19,18 @@ def erlangB(A, N):
 
 def generate_traffic_file():
     data = {}
-    N = 1
+    #134 199.71
+
+    N = Decimal(1)
 
     while N <= 500:
-        A = 0.0
+        A = Decimal(0)
+        data[str(N)] = {}
         while A <= 200:
-            data[str(N)] = {}
             res = erlangB(A=A, N=N)
             data[str(N)]["{:.2f}".format(A)] = res
             print(N, "{:.2f}".format(A))
-            A+= 0.01
+            A+= Decimal(0.01)
         N+= 1
 
     with open('traffic', 'w') as file:
