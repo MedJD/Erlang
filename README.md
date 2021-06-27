@@ -1,6 +1,6 @@
 # Erlang Calculator
 
-##Mode d'utilisation:
+## Mode d'utilisation:
 
 ### pour calculer A:
 
@@ -31,3 +31,5 @@ exemple d'exécution (B=0.05% et A=30.5 erlangs):
 
 sortie:
 `N = 49`
+
+
