@@ -60,7 +60,7 @@ Alors pour dépasser ces limite, il faut changer les valeurs des min et des max,
     - stepA = 0.01 (pas de A) 
     
 puis changer la ligne 89 du fichier erlangB.py à: `while N <= XXX:`  
-puis exécuter le script de calcul pour génerer les fichiers comme suit: 
+puis exécuter le script de calcul pour génerer les nouveaux fichiers comme suit: 
     
 `python3 data/ErlangB/generator_B.py`  
 
