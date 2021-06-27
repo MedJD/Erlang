@@ -42,7 +42,7 @@ Faut pas dépasser A=200 erlangs, et N=220
 
 ## Création des fichiers data
 
-Pour créer de nouveaux fichier de données et pouvoir dépasser les limites, il faut exécuter le script generator_B.py en modifiants les valeurs intérieurs de minA, minN, maxA, et maxN:   
+Pour créer de nouveaux fichiers de données et pouvoir dépasser les limites, il faut exécuter le script generator_B.py en modifiants les valeurs intérieurs de minA, minN, maxA, et maxN:   
 `python3 data/ErlangB/generator_B.py `
 
 pour l'instant les fichiers collectées sont pour:  
