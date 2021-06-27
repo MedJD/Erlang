@@ -20,14 +20,14 @@ def generate_traffic_file():
     data = {}
     N = 1
 
-    while N <= 1000:
+    while N <= 500:
         A = 0.0
-        while A <= 1000:
+        while A <= 200:
             data[str(N)] = {}
             res = erlangB(A=A, N=N)
-            data[str(N)]["{:.4f}".format(A)] = res
-            print(N, "{:.4f}".format(A))
-            A+= 0.0001
+            data[str(N)]["{:.2f}".format(A)] = res
+            print(N, "{:.2f}".format(A))
+            A+= 0.01
         N+= 1
 
     with open('traffic', 'w') as file:
@@ -36,7 +36,7 @@ def generate_traffic_file():
 def get_traffic():
     with open('traffic', 'r') as file:
         data = json.loads(file.read())
-        res = data['20']["{:.4f}".format(17.61)]*100
+        res = data['20']["{:.2f}".format(17.61)]*100
         print(res)
 
 def get_proba(A, N):
